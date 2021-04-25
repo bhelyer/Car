@@ -22,7 +22,7 @@ add_test(CarLib.Test CarLib.Test)
 
 add_executable(Car Car/main.cpp)
 target_compile_options(Car PRIVATE ${CAR_CXX_FLAGS})
-target_link_libraries(Car PRIVATE CarLib Ame)
+target_link_libraries(Car PRIVATE CarLib)
 if(WIN32)
     # Unix style globbing, on Windows. Wowzers!
     set_target_properties(Car PROPERTIES LINK_FLAGS "setargv.obj")
